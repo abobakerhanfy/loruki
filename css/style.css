@@ -1,0 +1,357 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+
+
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: "Lato", sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+ul{
+    list-style: none;
+
+}
+a{
+    text-decoration: none;
+    color:#333;
+
+}
+h1, h2{
+    font-weight: 300;
+    line-height: 1.2;
+    margin: 10px 0;
+}
+p{
+    margin: 10px 0;
+}
+img{
+width:100%;
+}
+code, pre{
+    background-color: #333;
+    color:#fff;
+    padding: 10px;
+}
+/* Start Navbar  */
+.navbar{
+    background-color: var(--background-color-primary
+    );
+    color: #fff;
+    height: 70px;
+}
+.navbar .flex{
+    justify-content: space-between;
+}
+.navbar ul{
+    display: flex;
+}
+.navbar ul li a{
+    padding: 10px;
+    color: #fff;
+    margin: 0 5px;
+}
+.navbar a:hover{
+    border-bottom: 2px #fff solid  ;
+}
+ /* End Navbar */
+
+ /* Start Showcase  */
+ 
+ .showcase{
+    height: 400px;
+    background-color: var(--background-color-primary);
+    color: #fff;
+    position: relative;
+
+ }
+ .showcase::after,
+ .showcase::before{
+    content:"";
+    height: 100px;
+    position:absolute;
+    bottom: -50px;
+    right: 0;
+    left: 0;
+    background-color: #fff;
+    transform: skewY(-3deg);
+ }
+ .showcase h1{
+    font-size: 40px;
+ }
+ .showcase p {
+    margin: 20px 0;
+ }
+ .showcase .grid{
+    grid-template-columns: 55% 45%;
+    gap: 30px;
+    overflow:visible;
+ }
+ .showcase-text{
+    animation: sliderInFromLeft 1s ease-in;
+ }
+ .showcase-form{
+position: relative;
+height: 350px;
+padding: 20px;
+justify-self: flex-end;
+z-index: 100;
+animation: sliderInFromRight 1s ease-in;
+
+ }
+ .showcase form .form-control{
+    margin: 30px 0px;
+ }
+ .showcase-form input[type='text'],
+ .showcase-form input[type='email']{
+    border: 0px;
+    border-bottom: 1px solid #b4becb;
+    width: 100%;    
+    padding: 3px;
+    font-size: 16px;
+    outline: none;
+    z-index: 0;
+ }
+ /* End Showcase  */
+
+ /* Start Stats  */
+ .stats{
+    z-index: 100;
+    padding-top: 100px;
+    animation:sliderInFromBottom 1s ease-in-out ;
+}
+ .stats-heading{
+    max-width: 500px;
+    margin: auto;
+ }
+ .stats .grid h3{
+    font-size: 35px;
+ }
+ .stats .grid p{
+    font-size: 20px;
+    font-weight: bold;
+ }
+ /* End Stats  */
+ 
+ /* Start Cli  */   
+ .cli .grid{
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+ }
+ .cli .grid *:first-child{
+    grid-column-start:1;
+    grid-column-end:3;
+    grid-row-start: 1;
+    grid-row-end: 3;
+ }
+ .cloud{
+    background-color: var(--background-color-primary);
+ }
+ .cloud .grid{
+     grid-template-columns: 4fr 3fr;
+     align-items: center;
+     justify-content: center;
+ }
+ /* End Cli  */
+
+/* Start Langauge  */
+.languages .flex{
+    flex-wrap: wrap;
+}
+ .languages .card{
+    margin: 18px 10px 40px;
+    transition: all .3s ease-in-out;
+ }
+ .languages .card h4{
+    font-size: 20px;
+    margin-bottom: 10px;
+ }
+ .languages .card:hover{
+    transform: translateY(-15px);
+ }
+ .footer .grid{
+    align-items: center;
+ }
+ .footer .social a{
+    margin: 0 10px;
+ }
+/* End Langauge  */
+
+/* Start features-head style  */
+.features-head .grid{
+    grid-template-columns: 60% 40%;
+    overflow: hidden;
+}
+.features-head img{
+    width:50%;
+    justify-self: end;
+}
+.features-sub-head .grid{
+    grid-template-columns: 60% 40%;
+    overflow: hidden;
+}
+.features-sub-head img{
+    width:50%;
+    justify-self: end;
+}
+.feature-main i {
+    padding: 0 20px;
+}
+.feature-main .card{
+    height: max-content;
+}
+.feature-main .grid *:first-child{
+    grid-column: 1/4;
+}
+.feature-main .grid *:nth-child(2){
+    grid-column: 1/3;
+}
+.docs-head .grid{
+    grid-template-columns: 60% 40%;
+    overflow: hidden;
+ }
+ .docs-head .grid *:first-child{
+    justify-self: start;
+ }
+ .docs-head img{
+    width: 40%;
+    justify-self: end;
+ }
+.doc-main .grid{
+    grid-template-columns: 1fr 2fr;
+    overflow: hidden;
+}
+.doc-main .grid > *:first-child{
+    justify-self: stretch;
+    align-self: start;
+}
+.doc-main ul li{
+    font-size: 17px;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+    border-bottom: 1px solid #ccc;
+}
+.doc-main ul li a{
+    color: #333;
+    transition: all 0.3s ease-in-out;
+    padding-right: 10px;
+}
+.doc-main ul li a:hover{
+    font-weight: bolder;
+    padding-left: 10px;
+    }
+
+/* Animations  */
+
+@keyframes sliderInFromLeft{
+    0%{
+        transform:translateX(-100%);
+    }
+    100%{
+        transform:translateX(0);
+
+    }
+}
+@keyframes sliderInFromRight{
+    0%{
+        transform:translateX(100%);
+    }
+    100%{
+        transform:translateX(0);
+
+    }
+}
+@keyframes sliderInFromTop{
+    0%{
+        transform:translateY(-100%);
+    }
+    100%{
+        transform:translateX(0);
+
+    }
+}
+@keyframes sliderInFromBottom{
+    0%{
+        transform:translateY(100%);
+    }
+    100%{
+        transform:translateX(0);
+
+    }
+}
+/* End features-head style  */
+
+   /* Table And Under  */
+ @media(max-width:768px){
+    .grid,
+    .showcase .grid,
+    .stats .grid,
+    .cli .grid,
+    .cloud .grid, 
+    .features-head .grid,
+    .features-sub-head .grid, 
+    .docs-head .grid, 
+    .doc-main .grid{
+        grid-template-columns: 1fr;
+        grid-template-rows:1fr;
+        }
+        .showcase{
+            height: auto;
+        }
+        .showcase-text{
+            text-align: center;
+            margin-top: 40px;
+            animation: sliderInFromTop 1s ease-in;
+        }
+        .showcase-form{
+            justify-self: center;
+            max-width: auto;
+            animation: sliderInFromBottom 1s ease-in;
+        }
+        .cli .grid .card{
+            grid-column: 1/3;
+        }
+
+        .features-head img{
+            justify-self: center;
+        }
+        .features-sub-head img{
+            width:50%;
+            justify-self: center;
+        }
+        .feature-main .grid .card{
+        grid-template-columns: 1fr;
+        grid-template-rows:1fr;
+        grid-column: 1/3;
+    }
+    .docs-head .grid > *:first-child{
+        align-self: center;
+        justify-self: center;
+        padding: 0px;
+
+    }
+    .docs-head .grid img{
+        justify-self: center;
+    }
+
+
+ }
+
+   /* Mobile  */
+   @media(max-width:500px){
+    .navbar{
+        height: 110px;
+    }
+    .navbar .flex{
+        flex-direction: column;
+    }
+    .navbar ul{
+        padding: 10px;
+        background-color: rgba(0,0,0,0.1);
+    }
+   }
